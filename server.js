@@ -2,11 +2,9 @@
 
 var express = require('express');
 var multer = require('multer');
-var fs = require('fs');
 var app = express();
 var parseString = require('xml2js').parseString
 const util = require('util');
-var done = false;
 
 /*Configure the multer.*/
 
@@ -30,11 +28,9 @@ app.post('/upload', upload.single('songlist'), (req,res) => {
       trackObj.artist = track.string[1];
       tracksArray.push(trackObj);
     }
-    console.log(tracksArray);
-    // console.log(util.inspect(result.plist.dict[0].dict[0].dict, false, null));
+
   });
-  // plist.dict[0].dict[0].dict for array to loop through.
-  // plist.dict[0].dict[0].dict[0].string for all track info
+
   res.status(204).end();
 });
 
