@@ -1,0 +1,11 @@
+{
+  "name": "file_upload",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "4.13.3",
+    "multer": "1.1.0",
+    "nodemon": "^1.11.0",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {}
+}
